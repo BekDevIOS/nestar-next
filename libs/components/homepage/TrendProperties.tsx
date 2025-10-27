@@ -26,7 +26,7 @@ const TrendProperties = (props: TrendPropertiesProps) => {
 
 	/** APOLLO REQUESTS **/
 	const [likeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
-	
+
 	const {
 		loading: getPropertiesLoading,
 		data: getPropertiesData,
@@ -85,7 +85,7 @@ const TrendProperties = (props: TrendPropertiesProps) => {
 								{trendProperties.map((property: Property) => {
 									return (
 										<SwiperSlide key={property._id} className={'trend-property-slide'}>
-											{/* <TrendPropertyCard property={property} /> */}
+											<TrendPropertyCard property={property} likePropertyHandler={likePropertyHandler}/>
 										</SwiperSlide>
 									);
 								})}
