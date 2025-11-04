@@ -195,7 +195,6 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 					});
 					await sweetMixinSuccessAlert('Successfully deleted!');
 				}
-				return;
 			} else {
 				await updateComment({
 					variables: {
